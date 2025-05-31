@@ -1,0 +1,95 @@
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Section Styling */
+header {
+  background-color: #01090f;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Game Section Styling */
+#games {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  gap: 30px;
+}
+
+.game-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.game {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.game h2 {
+  margin-bottom: 20px;
+  color: #090a0b;
+}
+
+button {
+  background-color: #06fb4f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Footer Section Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+  margin-top: 50px;
+} 
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

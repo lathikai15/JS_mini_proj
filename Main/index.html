@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Game Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Welcome to My Game Collection</h1>
+    <p>Select a game to play</p>
+  </header>
+
+  <!-- Game Selection Section -->
+  <section id="games">
+    <!-- First Row -->
+    <div class="game-row">
+      <div class="game">
+        <h2>Snake Game</h2>
+        <button onclick="openSnakeGame()">Play Snake</button>
+      </div>
+      <div class="game">
+        <h2>Tic-Tac-Toe</h2>
+        <button onclick="openTicTacToe()">Play Tic-Tac-Toe</button>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="game-row">
+      <div class="game">
+        <h2>Memory Game</h2>
+        <button onclick="openMemoryGame()">Play Memory Game</button>
+      </div>
+      <div class="game">
+        <h2>BMI Calculator</h2>
+        <button onclick="openBMICalculator()">Open BMI Calculator</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 My Game Dashboard. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Script Link -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+    background-color: #343a40;
+  }
+  
+  canvas {
+    background-color: #000;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  button {
+    font-size: 1.2rem;
+  }
+  
+  #gameOverMessage {
+    color: #f8d7da;
+  }
+  
+  #startBtn {
+    font-size: 1.2rem;
+  }
+  

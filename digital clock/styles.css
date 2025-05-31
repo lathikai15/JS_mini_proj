@@ -1,0 +1,61 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full screen background with center alignment */
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #2865d7, #243b55); /* Smooth gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Outer container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main card box */
+.clock-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Title */
+.clock-box h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Clock display wrapper */
+#clock-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffc3;
+  display: inline-block;
+}
+
+/* Clock time text */
+#clock {
+  font-size: 60px;
+  font-weight: bold;
+  color: #00ffc3;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3;
+  letter-spacing: 4px;
+}

@@ -1,0 +1,29 @@
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .cell.x {
+    color: #dc3545; /* Bootstrap danger */
+    font-weight: bold;
+  }
+  
+  .cell.o {
+    color: #0d6efd; /* Bootstrap primary */
+    font-weight: bold;
+  }
+  
+  #board {
+    display: grid;
+  }
+  
+  .d-none {
+    display: none !important;
+  }
+  
