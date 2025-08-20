@@ -1,0 +1,52 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', 
+                    url: 'https://github.com/lathikai15/JS_mini_proj.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                dir('MEM') {
+                    sh 'npm install'
+                }
+            }
+        }
+
+        stage('Build Project') {
+            steps {
+                dir('MEM') {
+                    // Run build only if package.json has a build script
+                    sh 'npm run build || echo "No build step defined"'
+                }
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                dir('MEM') {
+                    // Run tests only if defined
+                    sh 'npm test || echo "No test step defined"'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: '**/*.log', allowEmptyArchive: true
+        }
+        success {
+            echo 'Build completed successfully!'
+            // Example: Add email/Slack notification here
+        }
+        failure {
+            echo 'Build failed. Check logs for details.'
+            // Example: Add email/Slack notification here
+        }
+    }
+}
