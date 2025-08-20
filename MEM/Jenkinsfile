@@ -9,34 +9,24 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                dir('MEM') {
-                    bat 'npm install'
-                }
-            }
-        }
-
         stage('Build Project') {
             steps {
                 dir('MEM') {
-                    bat 'npm run build || echo No build step defined'
+                    echo 'No build step required for static project'
                 }
             }
         }
 
         stage('Run Tests') {
             steps {
-                dir('MEM') {
-                    bat 'npm test || echo No test step defined'
-                }
+                echo 'No tests defined for static project'
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: '**/*.log', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'MEM/**', allowEmptyArchive: true
         }
         success {
             echo 'Build completed successfully!'
