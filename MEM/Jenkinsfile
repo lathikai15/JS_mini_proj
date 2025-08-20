@@ -12,7 +12,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 dir('MEM') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -20,8 +20,7 @@ pipeline {
         stage('Build Project') {
             steps {
                 dir('MEM') {
-                    // Run build only if package.json has a build script
-                    sh 'npm run build || echo "No build step defined"'
+                    bat 'npm run build || echo No build step defined'
                 }
             }
         }
@@ -29,8 +28,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 dir('MEM') {
-                    // Run tests only if defined
-                    sh 'npm test || echo "No test step defined"'
+                    bat 'npm test || echo No test step defined'
                 }
             }
         }
@@ -42,11 +40,9 @@ pipeline {
         }
         success {
             echo 'Build completed successfully!'
-            // Example: Add email/Slack notification here
         }
         failure {
             echo 'Build failed. Check logs for details.'
-            // Example: Add email/Slack notification here
         }
     }
 }
